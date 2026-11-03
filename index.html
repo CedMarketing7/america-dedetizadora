@@ -84,7 +84,10 @@ section{padding:80px 0}
 .card .in{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
 .card h3{font-size:1.25rem}
 .card p{color:var(--muted);font-size:.97rem;flex:1}
-.card a{color:var(--red);font-weight:700;margin-top:6px}
+.card .btn{margin-top:8px;align-self:flex-start}
+.card .trio{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1.25fr) minmax(0,1fr);gap:3px;aspect-ratio:16/10;overflow:hidden}
+.card .trio img{aspect-ratio:auto;height:100%;min-height:0}
+.card .trio img:first-child{grid-column:1/-1}
 
 /* equipe */
 .team{background:var(--soft)}
@@ -150,7 +153,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
 
 <header class="head">
   <div class="wrap">
-    <a class="brand" href="#topo"><img src="assets/logo.png" alt="América Dedetizadora - Controladora de Pragas" width="157" height="52"></a>
+    <a class="brand" href="#topo"><img src="assets/logo.png" alt="América Dedetizadora - Controladora de Pragas" width="164" height="52"></a>
     <nav class="menu" aria-label="Menu">
       <a href="#servicos">Serviços</a>
       <a href="#equipe">Equipe</a>
@@ -192,19 +195,23 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
     </div>
     <div class="svc">
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1742483359033-13315b247c74?w=800&q=70&auto=format&fit=crop" alt="Técnico com roupa de proteção aplicando tratamento dentro de uma casa" loading="lazy">
+        <img src="assets/residencial.jpg" alt="Técnico da América Dedetizadora fazendo a dedetização no jardim de uma casa" loading="lazy">
         <div class="in">
           <h3>Desinsetização residencial</h3>
           <p>Nossa equipe especializada utiliza técnicas avançadas para fazer o controle de pragas de forma rápida e segura, garantindo que sua casa continue sendo um refúgio.</p>
-          <a href="https://wa.me/5567993192860?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20desinsetiza%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua desinsetização →</a>
+          <a class="btn btn-wa" href="https://wa.me/5567993192860?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20desinsetiza%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Fale conosco pelo WhatsApp</a>
         </div>
       </article>
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1669101283107-b32aab60587a?w=800&q=70&auto=format&fit=crop" alt="Profissional com equipamento de proteção higienizando um ambiente comercial" loading="lazy">
+        <div class="trio">
+          <img src="assets/empresa-mercado.jpg" alt="Técnico da América Dedetizadora fazendo a dedetização em um supermercado" loading="lazy">
+          <img src="assets/empresa-galpao-1.jpg" alt="Técnico da América Dedetizadora aplicando produto em um galpão" loading="lazy">
+          <img src="assets/empresa-galpao-2.jpg" alt="Técnico da América Dedetizadora aplicando produto junto às prateleiras de um depósito" loading="lazy">
+        </div>
         <div class="in">
           <h3>Soluções para empresas</h3>
           <p>Nossos serviços de desinsetização garantem um ambiente seguro e livre de pragas para seu negócio, utilizando métodos eficazes e equipamentos modernos para resultados duradouros.</p>
-          <a href="https://wa.me/5567993192860?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20minha%20empresa." target="_blank" rel="noopener">Agende sua desinsetização →</a>
+          <a class="btn btn-wa" href="https://wa.me/5567993192860?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20minha%20empresa." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Fale conosco pelo WhatsApp</a>
         </div>
       </article>
       <article class="card">
@@ -212,7 +219,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
         <div class="in">
           <h3>Limpeza de caixa d'água</h3>
           <p>Garanta água limpa e segura para sua residência ou empresa com um serviço profissional de limpeza e higienização de caixas d'água.</p>
-          <a href="https://wa.me/5567993192860?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20a%20limpeza%20da%20caixa%20d%27%C3%A1gua." target="_blank" rel="noopener">Agende a limpeza →</a>
+          <a class="btn btn-wa" href="https://wa.me/5567993192860?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20a%20limpeza%20da%20caixa%20d%27%C3%A1gua." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Fale conosco pelo WhatsApp</a>
         </div>
       </article>
     </div>
@@ -221,7 +228,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
 
 <section class="team" id="equipe">
   <div class="wrap">
-    <img src="https://images.unsplash.com/photo-1747659629851-a92bd71149f6?w=1000&q=70&auto=format&fit=crop" alt="Profissional aplicando produto com pulverizador" loading="lazy">
+    <img src="assets/fachada.jpg" alt="Fachada da América Dedetizadora com o carro da empresa" loading="lazy" style="aspect-ratio:1600/863">
     <div>
       <div class="sh" style="margin-bottom:0">
         <span class="tag">Nossa equipe</span>
