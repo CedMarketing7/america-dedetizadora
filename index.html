@@ -53,9 +53,10 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15;color:var(--navy)}
 .btn-sm{padding:10px 16px;font-size:.9rem}
 
 /* hero */
-.hero{position:relative;color:#fff;background:var(--navy) url('https://images.unsplash.com/photo-1674485135526-b5a686b33dfe?w=1600&q=70&auto=format&fit=crop') center/cover}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,28,53,.94) 0%,rgba(12,28,53,.82) 45%,rgba(12,28,53,.35) 100%)}
-.hero .wrap{position:relative;padding:88px 0 96px}
+.hero{position:relative;color:#fff;background:radial-gradient(900px 520px at 88% 0%,#1f3d6b 0%,transparent 65%),var(--navy);overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--red)}
+.hero .wrap{position:relative;padding:64px 0 76px;display:grid;gap:40px;align-items:center}
+.hero-img img{width:100%;height:auto;aspect-ratio:1553/1013;object-fit:cover;border-radius:14px;border:4px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(0,0,0,.4)}
 .kicker{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff;border-left:4px solid var(--red);padding-left:12px;margin-bottom:20px}
 .hero h1{color:#fff;font-size:clamp(2.3rem,7vw,4rem);font-weight:800;max-width:640px}
 .hero p{margin-top:18px;max-width:560px;font-size:1.12rem;color:#dce4ef}
@@ -121,6 +122,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
 
 @media(min-width:780px){
   .menu{display:flex}
+  .hero .wrap{grid-template-columns:1fr 1fr;padding:80px 0 92px}
   .trust .wrap{grid-template-columns:repeat(3,1fr)}
   .svc{grid-template-columns:repeat(3,1fr)}
   .team .wrap{grid-template-columns:1fr 1fr}
@@ -167,6 +169,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
 <main id="topo">
 <section class="hero" style="padding:0">
   <div class="wrap">
+    <div>
     <span class="kicker">Controladora de pragas</span>
     <h1>Diga adeus às pragas</h1>
     <p>Oferecemos soluções eficazes e ecológicas para um ambiente livre de pragas, e limpeza de caixa d'água, personalizadas de acordo com as suas necessidades.</p>
@@ -175,6 +178,8 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-s
       <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
     </div>
     <div class="chips"><span>Desinsetização profissional</span><span>Limpeza de caixa d'água</span></div>
+    </div>
+    <div class="hero-img"><img src="assets/residencial.jpg" alt="Técnico da América Dedetizadora, de uniforme, fazendo a dedetização de uma casa" width="1100" height="717" fetchpriority="high"></div>
   </div>
 </section>
 
